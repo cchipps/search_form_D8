@@ -1,0 +1,20 @@
+search_form.settings:
+  type: config_object
+  label: 'Search Form Example Settings'
+  mapping:
+    search_form:
+      type: mapping
+      mapping:
+        page_title:
+          type: text
+          label: 'Search Form page title:'
+        source_text:
+          type: text
+          label: 'Source text for Search Form:'
+block.settings.search_form_block:
+  type: block_settings
+  label: 'Search Form block'
+  mapping:
+    search_form_block_settings:
+      type: text
+      label: 'Search Form block settings'

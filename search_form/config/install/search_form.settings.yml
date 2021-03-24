@@ -1,0 +1,3 @@
+loremipsum:
+  page_title: 'Public Search Form Example'
+  source_text: "An example custom Drupal 8 Module that allows for a quick regex field search of a custom installed entity."

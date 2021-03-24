@@ -1,0 +1,4 @@
+search_form.form:
+  title: 'Forms Search Example'
+  description: 'An example custom Drupal 8 Module that allows for a quick regex field search of a custom installed entity.'
+  route_name: search_form.form

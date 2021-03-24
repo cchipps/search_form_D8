@@ -1,0 +1,8 @@
+name: 'Search Form Example'
+type: module
+description: 'An example custom Drupal 8 Module that allows for a quick regex field search of a custom installed entity.'
+package: 'Custom'
+core: 8.x
+version: '8.x-1.x'
+dependencies:
+

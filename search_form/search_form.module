@@ -1,0 +1,34 @@
+<?php
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * @file
+ * Contains hooks and alters for Search Form Example
+ */
+
+
+/**
+ * Implements hook_help().
+ */
+function search_form_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    case 'help.page.search_form':
+      return t('
+        <h2>Search Form Example in Drupal 8.</h2>
+        <h3>Instructions</h3>
+        <p>Unpack in the <em>modules</em> folder (currently in the root of your Drupal 8 installation) and enable in <strong>/admin/modules</strong>.</p>
+        ');
+  }
+}
+
+
+/**
+ * Implements hook_preprocess_page().
+ */
+function search_form_preprocess_page(&$variables) {
+  $path_args = explode('/', \Drupal::request()->getPathInfo());
+  if (in_array('entity_search', $path_args)) {
+    $variables['#attached']['library'][] = 'search_form/search_form';
+  }
+}

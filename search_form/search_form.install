@@ -1,0 +1,28 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for search form example module.
+ */
+
+/**
+ * Implements hook_install().
+ */
+function search_form_install() {
+  // Set default values for config which require dynamic values.
+  \Drupal::configFactory()->getEditable('search_form.settings')
+    ->set('email', \Drupal::config('system.site')->get('mail'))
+    ->set('email_err', \Drupal::config('system.site')->get('mail'))
+    ->save();
+  // Clear cron interval set to run next cron.
+  \Drupal::state()->set('search_form.next_execution', 0);
+}
+
+/**
+ * Implements hook_uninstall().
+ */
+function search_form_uninstall() {
+  \Drupal::configFactory()->getEditable('search_form.settings')->delete();
+  drupal_uninstall_schema('search_form');
+}
+

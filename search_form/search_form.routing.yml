@@ -1,0 +1,7 @@
+search_form.form:
+  path: '/entity_search'
+  defaults:
+    _form: '\Drupal\search_form\Form\SearchForm'
+    _title: 'Forms Search'
+  requirements:
+    _permission: 'access content'

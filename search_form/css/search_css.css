@@ -1,0 +1,17 @@
+/*!
+ * Forms Search Example Style Sheet
+ * This sheet is designed to style Forms Search Form
+ * 
+ */
+ 
+.fff-search__compontent button.fff-search__clear-button {
+    background-color: #FFFFFF;
+    border: 1px solid #227DAE !important;
+    color: #227DAE !important;
+}
+
+.fff-search__compontent button.fff-search__submit-button {
+    background-color: #FFFFFF;
+    border: 1px solid #227DAE !important;
+    color: #227DAE !important;
+}

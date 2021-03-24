@@ -1,0 +1,7 @@
+search_form:
+  version: 1.x
+  css:
+    theme:
+      css/search_css.css: {}
+  dependencies:
+    - core/jquery
